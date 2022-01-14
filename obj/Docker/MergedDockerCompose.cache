@@ -1,0 +1,39 @@
+services:
+  consumer:
+    build:
+      context: C:\Sandbox\MessagingTest
+      dockerfile: Consumer/Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8000
+    image: consumer
+    ports:
+    - published: 8000
+      target: 8000
+  producer:
+    build:
+      context: C:\Sandbox\MessagingTest
+      dockerfile: Producer/Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:9000
+    image: producer
+    ports:
+    - published: 9000
+      target: 9000
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management-alpine
+    ports:
+    - published: 5672
+      target: 5672
+    - published: 15672
+      target: 15672
+    restart: unless-stopped
+version: '3.4'

@@ -1,0 +1,11 @@
+C:\Sandbox\MessagingTest\EventBus\bin\Debug\net5.0\EventBus.deps.json
+C:\Sandbox\MessagingTest\EventBus\bin\Debug\net5.0\EventBus.dll
+C:\Sandbox\MessagingTest\EventBus\bin\Debug\net5.0\ref\EventBus.dll
+C:\Sandbox\MessagingTest\EventBus\bin\Debug\net5.0\EventBus.pdb
+C:\Sandbox\MessagingTest\EventBus\obj\Debug\net5.0\EventBus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Sandbox\MessagingTest\EventBus\obj\Debug\net5.0\EventBus.AssemblyInfoInputs.cache
+C:\Sandbox\MessagingTest\EventBus\obj\Debug\net5.0\EventBus.AssemblyInfo.cs
+C:\Sandbox\MessagingTest\EventBus\obj\Debug\net5.0\EventBus.csproj.CoreCompileInputs.cache
+C:\Sandbox\MessagingTest\EventBus\obj\Debug\net5.0\EventBus.dll
+C:\Sandbox\MessagingTest\EventBus\obj\Debug\net5.0\ref\EventBus.dll
+C:\Sandbox\MessagingTest\EventBus\obj\Debug\net5.0\EventBus.pdb

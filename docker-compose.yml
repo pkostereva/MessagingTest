@@ -1,0 +1,30 @@
+version: '3.4'
+
+services:
+  producer:
+    image: ${DOCKER_REGISTRY-}producer
+    build:
+      context: .
+      dockerfile: Producer/Dockerfile
+    ports:
+      - 9000:9000
+    depends_on:      
+      - rabbitmq
+
+  consumer:
+    image: ${DOCKER_REGISTRY-}consumer
+    build:
+      context: .
+      dockerfile: Consumer/Dockerfile
+    ports:
+      - 8000:8000
+    depends_on:  
+      - rabbitmq
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: 'rabbitmq'
+    restart: unless-stopped
+    ports:
+        - 5672:5672
+        - 15672:15672

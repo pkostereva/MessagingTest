@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  consumer:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8000
+    ports:
+      - "8000:8000"
+
+  producer:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:9000
+    ports:
+      - "9000:9000"
